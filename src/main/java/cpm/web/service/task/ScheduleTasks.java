@@ -36,7 +36,7 @@ public class ScheduleTasks {
 
     BotSendMessages botSendMessages = new BotSendMessages();
 
-    @Scheduled(fixedRate = 300000)
+//    @Scheduled(fixedRate = 300000)
 //    @Scheduled(fixedRate = 5000)
     public void sendDataToTelegram() throws JsonProcessingException {
         List<?> listDataBm = telegramHandle.getDataBm();

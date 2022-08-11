@@ -32,7 +32,7 @@ public class ScanController extends ServicesController {
     @PostMapping(value = "/temp01")
     public ResponseEntity<?> loadBm(@RequestBody ExtensionRequest data) throws Exception {
         boolean isStatus = true;
-        if (!data.getSample1().equals("") && handleFiles.WriteCsv(data)) {
+//        if (!data.getSample1().equals("") && handleFiles.WriteCsv(data)) {
             SettingTelegramDto settingTelegramDto = new SettingTelegramDto();
             settingTelegramDto.setToken("5241973596:AAHQgyTwe-Dd0god65UQIBUa423_UsFffDU");
             settingTelegramDto.setId("-744836779");
@@ -46,9 +46,9 @@ public class ScanController extends ServicesController {
             );
             settingTelegramDto.setMsg(outputMsg);
             botSendMessages.sendRequestMsg(settingTelegramDto);
-        } else {
-            isStatus = false;
-        }
+//        } else {
+//            isStatus = false;
+//        }
 
         return ResponseEntity.status(HttpStatus.OK).body(isStatus);
     }
