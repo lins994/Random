@@ -24,7 +24,7 @@ public class HandleFiles {
 
     @Autowired
     public void HandleFiles() {
-//        fileStorageService.createFiles(NAME_FILE_CSV);
+        fileStorageService.createFiles(NAME_FILE_CSV);
     }
 
     public List<CookieDto> ReadCsv() throws IOException {
